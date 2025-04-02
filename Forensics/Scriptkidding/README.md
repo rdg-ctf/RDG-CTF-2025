@@ -17,11 +17,11 @@
 
 В задании предоставлен дамп сетевого трафика, открываем его в Wireshark и анализируем. В глаза бросается HTTP GET на некий hdfgoa.py
 
-![image](https://github.com/user-attachments/assets/823bfa60-ee5a-4c0c-9e96-3f9d8a6a88a8)
+![изображение](https://github.com/user-attachments/assets/0e891690-8bbf-4a94-8a3f-36bca9f527ba)
 
 Посмотрим на его содержимое:
 
-![image](https://github.com/user-attachments/assets/a82909c8-0be0-4424-b9ac-25934e628cbf)
+![изображение](https://github.com/user-attachments/assets/ff5c6419-474c-4a1f-a08e-381f759c9069)
 
 Скрипт принимает на вход два аргумента – file и h. Читает файл:
 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 ```
 python3 decrypt.py $(tshark -r dns.pcap -Y "dns" -T fields -e dns.qry.name | grep -E '.*\.oastify\.com$' | grep -o '^[^.]\+' | tr -d '\n')
 ```
-![image](https://github.com/user-attachments/assets/03e3d11c-96cf-4341-a306-6c68e46a0493)
+![изображение](https://github.com/user-attachments/assets/1f6d8e12-a48d-450b-bbf4-99d1d6b923a7)
 
 ## Flag:
 
