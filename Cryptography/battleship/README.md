@@ -17,15 +17,15 @@
 
 Для поиска 4 палубного:
 
-<img width="195" alt="изображение" src="https://github.com/user-attachments/assets/917490d3-6655-4c63-90c0-c58d7bda2670" />
+![изображение](https://github.com/user-attachments/assets/3b891817-65c4-4719-8e85-2c9cc9d198fa)
 
 Для поиска 3 и 2 палубного:
 
-<img width="219" alt="изображение" src="https://github.com/user-attachments/assets/64d40bf5-df1e-4b75-90a0-f436a4870535" />
+![изображение](https://github.com/user-attachments/assets/48bf5628-6164-4042-81c7-bc626dd3efd8)
 
 И по стратегии расстановки кораблей поступаем так, чтобы ореол от взрыва покрывал как можно меньшую площадь. Вот несколько примеров (однопалубные можно расположить любым способом):
 
-<img width="435" alt="изображение" src="https://github.com/user-attachments/assets/7c5cfd84-bca7-4f78-ab1c-8319fdc4ef2b" />
+![изображение](https://github.com/user-attachments/assets/9069436b-c436-4f3e-b8e2-a2ba9b586c8c)
 
 Но что же надо сделать чтобы победить 100 раз подряд? 
 
