@@ -21,8 +21,7 @@
 
 # Результаты
 
- ![final_scoreboard](https://github.com/user-attachments/assets/caa8528a-4ea9-4dcf-a347-516ad32fbae8)
-
+![image](https://github.com/user-attachments/assets/0020d078-5db9-4c25-bdc1-19fb5f724f25)
 
 ## Разборы и Решения
 
