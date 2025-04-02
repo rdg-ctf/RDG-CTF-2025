@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization</title>
+    the quiter you are the more you are able to hear, they said
+</head>
+<body>
+    <h1>Authorization</h1>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        {{ form.hidden_tag() }}
+        <button type="submit">Log-in</button>
+        <a href="{{ url_for('register') }}">Not entertained?</a>
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+    </form>
+</body>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</html>

@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    ports:
+      - "10060:3000"
+    container_name: hackersite

@@ -1,0 +1,12 @@
+{
+  "name": "xss-bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "playwright": "^1.50.1",
+    "puppeteer": "^19.0.0"
+  }
+}

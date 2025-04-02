@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnlyCats 🐾</title>
+    <style>
+        body {
+            background: #ffe6f2;
+            font-family: 'Comic Neue', cursive;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+        }
+
+        .cat-title {
+            color: #ff69b4;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 0 #ffb6c1;
+            margin-bottom: 20px;
+        }
+
+        .cat-image {
+            width: 400px;
+            border-radius: 20px;
+            border: 5px solid #ffb6c1;
+            transition: transform 0.3s;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .cat-image:hover {
+            transform: rotate(-2deg);
+        }
+
+        .speech-bubble {
+            background: #fff;
+            border: 3px solid #ff69b4;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            position: relative;
+            font-size: 1.2em;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            border: 10px solid transparent;
+            border-top-color: #ff69b4;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hearts {
+            position: absolute;
+            width: 40%;
+            height: 30%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            animation: heart-float 3s linear forwards;
+        }
+
+        @keyframes heart-float {
+            0% { opacity: 0; transform: translateY(0); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-100px); }
+        }
+
+        .paw-border {
+            border: 15px solid transparent;
+            border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23ff69b4" d="M12 2a5 5 0 0 1 5 5c0 4.253-2.644-1.612-5-5-2.356 3.388-5-0.753-5-5a5 5 0 0 1 5-5zm0 18a5 5 0 0 1-5-5c0-4.253 2.644 1.612 5 5 2.356-3.388 5 0.753 5 5a5 5 0 0 1-5 5z"/></svg>') 30 round;
+        }
+    </style>
+</head>
+<body>
+    <div class="container paw-border">
+        <h1 class="cat-title">🐾 Weclome to the MeowLand! 🐾</h1>
+        
+        <div class="speech-bubble">
+            "Meow! I protect this site from bugs and errors! 🐱💻"
+        </div>
+
+        <img src="/assets/cat.jpg" class="cat-image" alt="kitten">
+        
+        <div class="hearts" id="hearts-container"></div>
+
+        <div style="margin-top: 30px; color: #ff69b4;">
+            <h2>❤️  This kitty protects:</h2>
+            <p>• Your good vibes</p>
+            <p>• All the cookies around 100km</p>
+            <p>• Some secret CTF flags</p>
+        </div>
+    </div>
+
+    <script>
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + '%';
+            container.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 3000);
+        }
+
+        setInterval(createHearts, 300);
+    </script>
+</body>
+</html>

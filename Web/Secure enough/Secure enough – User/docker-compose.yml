@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./app
+    ports:
+      - "10020:5000"
+    volumes:
+      - ./app:/app
+    environment:
+      - FLAG='rdg{REDACTED}'
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - TWO_FA_SERVICE=http://2fa:8080
+    depends_on:
+      - 2fa
+    networks:
+      - net
+
+  2fa:
+    build:
+      context: ./2FA
+    networks:
+      - net
+    #ports:
+    #  - "8080:8080"
+networks:
+  net:
+    driver: bridge

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <nav>
+        {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('login') }}">Authorize</a>
+        {% endif %}
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('admin') }}">Back to article list</a>
+            <a href="{{ url_for('logout') }}">Exit</a>
+        {% endif %}
+    </nav>
+    <h1>{{ article.title }}</h1>
+    <p><strong>Moderation status:</strong> {{ 'Awaits for review' if not article.is_moderated else 'Accepted' }}</p>
+    <div>
+        {{ article_content_html | safe }}
+    </div>
+    {% if current_user.is_admin %}
+        <form method="POST" action="{{ url_for('approve_article', article_id=article.id) }}">
+            <button type="submit">Accept</button>
+        </form>
+        <form method="POST" action="{{ url_for('decline_article', article_id=article.id) }}">
+            <button type="submit">Decline</button>
+        </form>
+    {% endif %}
+</body>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</html>

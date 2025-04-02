@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - OnlyCats 🐾</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+    <style>
+        body {
+            background: #ffe6f2;
+            font-family: 'Comic Neue', cursive;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+        }
+
+        .cat-title {
+            color: #ff69b4;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 0 #ffb6c1;
+            margin-bottom: 20px;
+        }
+
+        .admin-content {
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="cat-title">🐾 Admin Panel 🐾</h1>
+        <div class="admin-content">
+            <p>Welcome to the admin panel!</p>
+            <p>You can manage your content here, some flags, for example: </p>
+            <div class="flag">{{ flag }}</div>
+        </div>
+    </div>
+</body>
+</html>

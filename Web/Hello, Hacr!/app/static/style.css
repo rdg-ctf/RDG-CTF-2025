@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #1e1e1e; /* Темный фон */
+    color: #00ffcc; /* Яркий цвет текста */
+    font-size: 20px;
+    font-family: 'Tourney', monospace;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #00ffcc; /* Яркий цвет заголовков */
+    text-shadow: 0 0 10px #00ffcc77; /* Светящийся эффект */
+    border-bottom: 2px solid #00ffcc; /* Цвет границы */
+    padding-bottom: 10px;
+    animation: glitch 1s infinite;
+}
+
+form {
+    background: #000;
+    border: 2px solid #00ffcc;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #00ffcc55;
+    display: flex; /* Используем flexbox для расположения элементов внутри формы */
+    flex-direction: column; /* Вертикальное расположение элементов формы */
+    align-items: stretch; /* Растягиваем элементы до полной ширины формы */
+}
+
+input, textarea, button {
+    width: 100%; /* Убедитесь, что все элементы занимают 100% ширины */
+    padding: 12px;
+    margin: 8px 0; /* Используйте одинаковые отступы */
+    background: #222;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    font-size: 20px;
+    font-family: 'Tourney';
+    transition: all 0.3s;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: #222; /* Темный фон для полей ввода */
+    border: 1px solid #00ffcc; /* Яркий цвет границы */
+    color: #00ffcc; /* Яркий цвет текста */
+    font-size: 20px;
+    font-family: 'Tourney';
+    transition: all 0.3s;
+}
+
+a {
+    color: #ff00ff; /* Яркий цвет ссылок */
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-family: 'Tourney', monospace;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #00ffcc; /* Цвет при наведении */
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.5px;
+    bottom: 0px;
+    left: 0;
+    background: #00ffcc; /* Яркий цвет подчеркивания */
+    transition: width 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffcc; /* Светящийся эффект при фокусе */
+}
+
+button {
+    background: linear-gradient(45deg, #003300, #001100); /* Темный градиент */
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #005500, #003300); /* Яркий градиент при наведении */
+    box-shadow: 0 0 15px #00ffcc; /* Светящийся эффект */
+}
+
+nav {
+    border: 2px solid #00ffcc; /* Яркий цвет границы навигации */
+    padding: 15px;
+    margin: 20px 0;
+    background: #111; /* Темный фон навигации */
+}
+
+nav a {
+    color: #ff00ff;
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-family: 'Tourney', monospace;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #00ffcc;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #222;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #00ffcc;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 15px #00ffcc55;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0 0 10px #00ffcc77; }
+    50% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ccff; }
+    100% { text-shadow: 0 0 10px #00ffcc77; }
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 255, 255, 0.1) 1px, /* Яркий цвет для линий */
+        transparent 1px
+    );
+    background-size: 100% 2px;
+    pointer-events: none;
+    animation: scanline 5s linear infinite;
+}

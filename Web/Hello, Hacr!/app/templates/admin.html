@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+</head>
+<body>
+    <h1>Admin panel ?? rdg{af4cf13151aee7af4aa26b9bb817a079}</h1>
+    <nav>
+        <a href="{{ url_for('dashboard') }}">Profile</a>
+        {% if current_user.is_admin %}
+            <a href="{{ url_for('admin') }}">Admin panel</a>
+        {% endif %}
+        <a href="{{ url_for('change_password') }}">Change password</a>
+        <a href="{{ url_for('logout') }}">Exit</a>
+    </nav>
+
+    <h2>Waiting for moderation</h2>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a href="{{ url_for('view_article', article_id=article.id) }}">{{ article.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</html>

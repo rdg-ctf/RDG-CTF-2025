@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  web:
+    build: ./app
+    ports:
+      - "10040:5000"
+    environment:
+      - FLASK_ENV=development
+    networks:
+      - net
+  bot:
+    build:
+      context: ./admin-bot
+    container_name: admin-bot
+    restart: unless-stopped
+    depends_on:
+      - web
+    networks:
+      - net
+
+networks:
+  net:

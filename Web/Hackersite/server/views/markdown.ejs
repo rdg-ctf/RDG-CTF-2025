@@ -1,0 +1,19 @@
+<h1>Markdown Playground</h1>
+<p>Попробуй преобразовать свой MarkDown в HTML.</p>
+
+<form action="/markdown" method="POST">
+  <div class="form-group">
+    <label for="markdownContent">Введите MarkDown</label>
+    <textarea class="form-control" id="markdownContent" name="markdownContent" rows="6"></textarea>
+  </div>
+  <button type="submit" class="btn btn-warning">Преобразовать</button>
+</form>
+
+<hr/>
+
+<h3>Результат:</h3>
+<div style="border: 1px solid #f90; padding: 10px;">
+  <% if (output) { %>
+    <%= output %>
+  <% } %>
+</div>

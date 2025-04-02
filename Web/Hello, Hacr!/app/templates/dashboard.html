@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rbahrbah</title>
+    ...i use arch btw
+</head>
+<body>
+    <h1>Welcome, {{ current_user.username }}!</h1>
+    <nav>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('write_article') }}">Write a new article</a>
+        {% if current_user.is_admin %}
+        <a href="{{ url_for('admin') }}">Admin panel</a>
+        {% endif %}
+        <a href="{{ url_for('change_password')}}">Change password</a>
+        <a href="{{ url_for('logout') }}">Exit</a>
+    </nav>
+
+    <h2>Your articles</h2>
+    <ul>
+        {% for article in current_user.articles %}
+            <li>
+                <strong>{{ article.title }}</strong> - 
+                Status: {{ 'Awaits for review' if not article.is_moderated else 'Accepted' }} 
+                <a href="{{ url_for('view_user_article', article_id=article.id) }}">View</a>
+            </li>
+        {% else %}
+            <li>You have no articles yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</html>

@@ -1,0 +1,19 @@
+body {
+    background-color: #000;
+    color: #f90;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #f90;
+  }
+  
+  .btn-warning {
+    background-color: #f90;
+    border-color: #f90;
+    color: #000;
+  }
+  
+img.border-warning {
+  border-width: 2px;
+  padding: 5px;
+}
