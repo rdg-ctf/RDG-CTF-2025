@@ -153,21 +153,21 @@ def link_sent():
 
 Для этого отправляемся на страницу `/login` и вводим креды пользователя без 2FA, попадаем на `/my_profile`:
 
-<img width="1394" alt="изображение" src="https://github.com/user-attachments/assets/aaf1717f-8cb8-4730-836a-22c02d0d4de1" />
+![изображение](https://github.com/user-attachments/assets/f248ec33-5c04-40a6-9c19-cfcf63d56937)
 
 После этого открываем новую вкладку браузера, отправляемся на `/forgot` и вводим `admin`, отправляем запрос:
 
-<img width="1130" alt="изображение" src="https://github.com/user-attachments/assets/a97af0d5-b5c9-439c-86f7-c5cae7848eb7" />
+![изображение](https://github.com/user-attachments/assets/80af196c-feb3-404f-adb2-ae813fd83070)
 
 Затем, получив запрос с перенаправлением на `/link_sent`, меняем путь с `link_sent` на `/my_profile`, не давая сессии очиститься:
 
-<img width="1130" alt="изображение" src="https://github.com/user-attachments/assets/08d85f17-2bf1-4598-974b-ce0cf9486a02" />
+![изображение](https://github.com/user-attachments/assets/15bd06bb-2322-42f2-9a2f-bcc3ea3fc1c3)
 
-<img width="1119" alt="изображение" src="https://github.com/user-attachments/assets/a7c65cdd-3016-4b76-ab63-ee02006693de" />
+![изображение](https://github.com/user-attachments/assets/9a2c329f-a601-48b4-bfec-a50d89cfc85c)
 
 Сразу после этого оказываемся в профиле админа:
 
-<img width="1480" alt="изображение" src="https://github.com/user-attachments/assets/e426e237-4218-4615-9eaf-7e5a5c884a5e" />
+![изображение](https://github.com/user-attachments/assets/91550c76-7683-408d-afc3-589a7a992297)
 
 ## Flag:
 rdg{2fa_byp455_5ucc355Fu11_ou34pdwseklm}
