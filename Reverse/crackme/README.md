@@ -9,13 +9,13 @@
 
 Разбираем Pyinstaller, достаём главный исполняемый модуль. При помощи pycdc, uncompyle6 или decompyle3
 
-<img width="303" alt="изображение" src="https://github.com/user-attachments/assets/b025f875-4fff-4ef2-b058-d4163a1c27b0" />
+![изображение](https://github.com/user-attachments/assets/d9205fbf-4089-4741-8f3a-aa9965c043df)
 
 Видим, что у нас идёт проверка пароля. При помощи функции decrypt, которая на самом деле является xor шифрованием и вводит нас в заблуждение своим названием.
 
 Расшифрованный пароль «RDGCTFPASSpaaaaaasssssssspaaaasssssssssssss» позволяет нам попасть во вторую стадию. Восстанавливаем исходники второй стадии.
 
-<img width="371" alt="изображение" src="https://github.com/user-attachments/assets/6758256a-0b35-4a2f-9d01-0fda3c39044b" />
+![изображение](https://github.com/user-attachments/assets/bde9d4fc-dd16-45da-a436-a50d5eb156bf)
 
 Во второй стадии код также зашифрован xor’ом. Правильный ключ позволяет получить правильный исполняемый код. Пробуем его перебрать, проверяя хэш кода. Ключ P@SS.
 
