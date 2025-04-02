@@ -62,15 +62,15 @@ Hash: 2d6bba219472d069f67c589ee4040a7e1c289bce
 ```
 Здесь помимо всего прочего фигурирует SHA1-хеш исполняемого файла. Проверим хеш 7f56e91b828a0b48478765171f4208ad8f89bae0 засветившегося ранее файла c:\users\tech\downloads\updater.exe на VirusTotal.
 
-<img width="952" alt="Screen_1" src="https://github.com/user-attachments/assets/fd542a42-e561-4d70-b916-832d4daef1a9" />
+![изображение](https://github.com/user-attachments/assets/29998ffa-007c-45d4-875b-1c4b74d11e99)
 
 Файл представляет собой самораспаковывающийся архив. 
 
-<img width="797" alt="Screen_1_1" src="https://github.com/user-attachments/assets/f1ee5a32-4a3e-48b1-94cf-9307c8f1fcbe" />
+![изображение](https://github.com/user-attachments/assets/f6bfdb74-8b83-4dfc-828f-992d67340baf)
 
 Смотрим дочерние объекты на вкладке Relations. 
 
-<img width="483" alt="Screen_2" src="https://github.com/user-attachments/assets/190a33b4-8f07-466f-8252-f8e9559ff89f" />
+![изображение](https://github.com/user-attachments/assets/c8d3603a-f56b-489c-98af-1ffea37e0b8c)
 
 Архив включал в себя три файла:
 - WindowsUpdater.exe 
