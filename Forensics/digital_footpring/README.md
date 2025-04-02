@@ -128,7 +128,7 @@ ignoreProxyFile=1
 ```
 Для закрепления в системе существует множество техник (закрепление через реестр, сервис, каталоги автозагрузки и т.д.). Просмотрим содержимое куста реестра SOFTWARE (C:\\Windows\\System32\\config\\SOFTWARE) с помощью EZ Registry Explorer. Проведем поиск по ключевому слову ранее выявленного исполняемого файла MeshAgent - WindowsUpdater.exe. В результате установим факт наличия созданной задачи "OneDrive Init" в планировщике задач Windows:
 
-![изображение](https://github.com/user-attachments/assets/22c71be1-bec2-4208-8f5b-dd18c4c592ae)
+![изображение](https://github.com/user-attachments/assets/bcd73420-61bc-4d97-98dc-9b5e5e2f7159)
 
 Использование планировщика задач Windows соответствует технике T1053.005 Scheduled Task/Job: Scheduled Task матрицы MITRE ATT&CK. 
 
