@@ -27,7 +27,32 @@
 
 И получается, что старшие биты - это и есть простое число p. Таким образом создан бэкдор, что зная n можно найти p. 
 
-Отдаём это все криптографу, прогоняем через RSACTFTool и получаем флаг.
+Отдаём это все криптографу, прогоняем через RSACTFTool и получаем флаг. Скрипт факторизации:
+
+```
+log = gmpy.log
+is_divisible = lambda n, p: n % p == 0
+next_prime = gmpy.next_prime
+
+n =  #from pub.key file
+def factor_XYXZ(n, base=3):
+    """
+    Factor a x^y*x^z form integer with x prime.
+    """
+    power = 1
+    max_power = (int(log(n) / log(base)) + 1) >> 1
+    while power <= max_power:
+        p = next_prime(base ** power)
+        if is_divisible(n, p):
+            return p, n // p
+        power += 1
+
+
+for base in [2, 3, 5, 7, 11, 13, 17]:
+    p,q = factor_XYXZ(n, base)
+    if p != None:
+        print(p,q)
+```
 
 ## Flag
 rdg{pyth0n_m@tr3shk@}
